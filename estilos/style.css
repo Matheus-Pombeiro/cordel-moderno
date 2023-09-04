@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/*Fontes importadas do Google Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');   /*Passion One*/
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');      /*Sriracha*/
+
+/*Variáveis*/
+:root {
+    --font-padrao: Verdana, Geneva, Tahoma, sans-serif;
+    --font-titulo: 'Passion One', cursive;
+    --font-body: 'Sriracha', cursive;
+}
+
+/*Reset*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Config. Padrão*/
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--font-padrao);
+}
+
+/*Header*/
+header {
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    font-variant: small-caps;
+    font-family: var(--font-titulo);
+    font-size: 4rem;
+}
+
+/*Links header e footer*/
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;    
+}
+
+/*Corpo do site*/
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+}
+
+section > p {
+    padding-bottom: 2rem;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    box-shadow: inset 5px 5px 10px 0 rgba(0, 0, 0, 0.537);
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    width: 300px;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.516);
+    text-shadow: 1px 1px 0 black;
+}
+
+/*Add as imagens ao site (paralax)*/
+section#img001 {
+    background-image: url('../assets/background001.jpg');
+}
+
+section#img002 {
+    background-image: url('../assets/background002.jpg');
+}
+
+/*Footer*/
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Mobile Config.*/
+@media screen and (max-width: 480px) {
+
+    header > h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        font-size: 1rem;
+    }
+
+    section.imagem > p {
+        width: 190px;
+    }
+
+}
